@@ -1,0 +1,21 @@
+.right-button {
+	float: right;
+}
+
+div.content {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+div.app {
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+div {
+	padding-top: 2%;
+}
+
+header {
+	text-align: center;
+}
