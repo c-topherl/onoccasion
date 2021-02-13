@@ -1,10 +1,14 @@
 import React from 'react'
+import { Jumbotron } from 'react-bootstrap'
 
 const Home = (props) => {
   return (
-      <div className="content">
-        <h2>Welcome to OnOccasion!</h2>
-      </div>
+    <Jumbotron fluid>
+        <h1>On Occasion</h1>
+        <p>
+            Maybe some text here. Or buttons. With a nice background image!
+        </p>
+    </Jumbotron>
   )
 }
 

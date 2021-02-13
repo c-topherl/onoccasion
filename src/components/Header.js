@@ -1,15 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 
 const Header = () => (
   <header>
-    <h1>Imagine a large banner here!</h1>
-    <nav>
-      <ul>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/event-list'>Event List</Link></li>
-      </ul>
-    </nav>
+	<Navbar bg="light" expand="lg">
+		<Navbar.Toggle aria-controls="basic-navbar-nav" />
+		<Navbar.Collapse id="basic-navbar-nav">
+			<Nav className="mr-auto">
+				<NavDropdown title="Menu" id="basic-nav-dropdown">
+	    			<LinkContainer to="/">
+	  					<Navbar.Brand>Home</Navbar.Brand>
+	  				</LinkContainer>
+	    			<LinkContainer to="/occasion-list">
+	  					<Navbar.Brand>Occasion List</Navbar.Brand>
+	  				</LinkContainer>
+	  			</NavDropdown>
+	  		</Nav>
+	  	</Navbar.Collapse>
+	</Navbar>
   </header>
 )
 
