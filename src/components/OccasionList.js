@@ -47,6 +47,7 @@ const OccasionList = (props) => {
             </tbody>
         </Table>
         </Row>
+        
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Edit Occasion</Modal.Title>
