@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "onoccasion9d3b85c7": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

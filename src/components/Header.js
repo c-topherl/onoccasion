@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import { Button, Link, Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 
 const Header = () => (
@@ -12,11 +12,15 @@ const Header = () => (
 	    			<LinkContainer to="/">
 	  					<Navbar.Brand>Home</Navbar.Brand>
 	  				</LinkContainer>
-	    			<LinkContainer to="/occasion-list">
+	    			<LinkContainer to="/occasions">
 	  					<Navbar.Brand>Occasion List</Navbar.Brand>
 	  				</LinkContainer>
 	  			</NavDropdown>
 	  		</Nav>
+
+         <LinkContainer to="/occasions">
+    		<Button>Get Started</Button>
+    	</LinkContainer>
 	  	</Navbar.Collapse>
 	</Navbar>
   </header>
