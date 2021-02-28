@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button, Container, Modal, Row, Table } from 'react-bootstrap';
 import EditOccasionForm from './EditOccasionForm'
+import { withAuthenticationRequired } from "@auth0/auth0-react";
+import Loading from './Loading'
 
 const OccasionList = (props) => {
   const [show, setShow] = useState(false);
@@ -15,6 +17,7 @@ const OccasionList = (props) => {
     alert("Occasion updated");
     handleClose();
   };
+
 
   return (
       <Container>
@@ -66,4 +69,6 @@ const OccasionList = (props) => {
   )
 }
 
-export default OccasionList;
+export default withAuthenticationRequired(OccasionList, {
+  onRedirecting: () => <Loading />,
+});
