@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button, Container, Modal, Row, Table } from 'react-bootstrap';
 import EditOccasionForm from './EditOccasionForm'
-import { withAuthenticator } from "@aws-amplify/ui-react";
 
 const OccasionList = (props) => {
   const [show, setShow] = useState(false);
@@ -67,4 +66,4 @@ const OccasionList = (props) => {
   )
 }
 
-export default withAuthenticator(OccasionList);
+export default OccasionList;

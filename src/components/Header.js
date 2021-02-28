@@ -1,15 +1,6 @@
 import React from 'react'
 import { Button, Link, Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
-import { Auth } from 'aws-amplify';
-
-async function signOut() {
-    try {
-        await Auth.signOut();
-    } catch (error) {
-        console.log('error signing out: ', error);
-    }
-}
 
 const Header = () => (
   <header>
@@ -30,7 +21,6 @@ const Header = () => (
          <LinkContainer to="/occasions">
     		<Button>Get Started</Button>
     	</LinkContainer>
-         <Button onClick={signOut}>Log Out</Button>
 	  	</Navbar.Collapse>
 	</Navbar>
   </header>
